@@ -1,0 +1,176 @@
+/* Reset default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and body defaults */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #1F2937;
+  line-height: 1.5;
+}
+
+/* Header */
+.Header {
+  background-color: #1F2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.Header h1 {
+  font-size: 24px;
+  color: #F9FAF8;
+  font-weight: 700;
+}
+
+.HeaderLinks a {
+  font-size: 18px;
+  color: #E5E7EB;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.HeaderLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.Hero {
+  background-color: #1F2937;
+  padding: 80px 60px;
+  text-align: left;
+}
+
+.Hero h2 {
+  font-size: 48px;
+  color: #F9FAF8;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.Hero p {
+  font-size: 18px;
+  color: #E5E7EB;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.SignUp {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  padding: 12px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.SignUp:hover {
+  background-color: #2c6cd6;
+}
+
+/* Hero image */
+.HeroImage img {
+  max-width: 100%;
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Information section */
+.Information {
+  padding: 60px;
+  text-align: center;
+}
+
+.Information h3 {
+  font-size: 36px;
+  color: #1F2937;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.ImagesAndInformation {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.InfoImage {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.InfoText {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #1F2937;
+}
+
+/* Quote section */
+.Quote {
+  background-color: #E5E7EB;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.Quote h2 {
+  font-size: 36px;
+  font-style: italic;
+  color: #1F2937;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.Quote h3 {
+  font-size: 20px;
+  color: #1F2937;
+  font-weight: 500;
+}
+
+/* Call to action */
+.CallToAction {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  margin: 60px;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CallToAction p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.CallToAction .SignUp {
+  border: 2px solid #F9FAF8;
+  background: transparent;
+}
+
+.CallToAction .SignUp:hover {
+  background-color: #F9FAF8;
+  color: #3882F6;
+}
+
+/* Footer */
+.Footer {
+  background-color: #1F2937;
+  padding: 30px;
+  text-align: center;
+}
+
+.Footer p {
+  font-size: 18px;
+  color: #E5E7EB;
+}
