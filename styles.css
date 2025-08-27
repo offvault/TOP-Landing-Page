@@ -1,3 +1,5 @@
+
+
 /* Reset default margins/padding */
 * {
   margin: 0;
@@ -11,6 +13,10 @@ body {
   background-color: #fff;
   color: #1F2937;
   line-height: 1.5;
+}
+
+html, body {
+  height: 100%;
 }
 
 /* Header */
@@ -39,23 +45,30 @@ body {
   text-decoration: underline;
 }
 
-/* Hero section */
+/* Hero section - Flex layout for side-by-side content */
 .Hero {
   background-color: #1F2937;
   padding: 80px 60px;
-  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  color: #F9FAF8;
+}
+
+.HeroContent {
+  flex: 1;
+  min-width: 300px;
 }
 
 .Hero h2 {
   font-size: 48px;
-  color: #F9FAF8;
   font-weight: 900;
   margin-bottom: 20px;
 }
 
 .Hero p {
   font-size: 18px;
-  color: #E5E7EB;
   margin-bottom: 20px;
   max-width: 600px;
 }
@@ -74,13 +87,13 @@ body {
   background-color: #2c6cd6;
 }
 
-/* Hero image */
+/* Hero image - aligned to the right */
 .HeroImage img {
   max-width: 100%;
   height: auto;
   width: 400px;
+  min-width: 300px;     /* Prevents excessive shrinking */
   border-radius: 10px;
-  margin-top: 30px;
 }
 
 /* Information section */
@@ -99,12 +112,17 @@ body {
 .ImagesAndInformation {
   display: flex;
   justify-content: space-around;
-  gap: 40px;
+  gap: 20px; /* Reduced gap */
   flex-wrap: wrap;
 }
 
+/* Make all info images same size and larger */
 .InfoImage {
-  width: 200px;
+  width: 220px;
+  height: 180px;
+  min-width: 220px;     /* Prevents shrinking below this */
+  min-height: 180px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -156,6 +174,7 @@ body {
 .CallToAction .SignUp {
   border: 2px solid #F9FAF8;
   background: transparent;
+  color: #F9FAF8;
 }
 
 .CallToAction .SignUp:hover {
@@ -173,4 +192,49 @@ body {
 .Footer p {
   font-size: 18px;
   color: #E5E7EB;
+}
+
+.MainWindow {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.MainContainer {
+  flex: 1; /* This makes the main content take up available space, pushing footer down */
+  width: 100%;
+}
+
+.Information, .Hero, .Quote, .CallToAction {
+  min-width: 300px; /* Prevents layout from squeezing too hard */
+}
+
+.Hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 60px;
+  background-color: #1F2937;
+  flex-wrap: wrap;
+}
+
+.HeroContent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.HeroImage {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.HeroImage img {
+  max-width: 100%;
+  width: 400px;
+  min-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
